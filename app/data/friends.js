@@ -53,11 +53,11 @@ var exports = module.exports;
 
 exports.friends = friends
 
-exports.addFriend = function(name, photo, scores){
+exports.addFriend = function(req){
     var friend = {
-        name: name,
-        photo: photo,
-        scores: scores
+        name: req.name,
+        photo: req.photo,
+        scores: req.scores
     };
 
     friends.push(friend);
