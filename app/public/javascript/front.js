@@ -1,6 +1,6 @@
 $("#submit").on("click", function(event) {
     event.preventDefault();
-
+    // console.log("click")
     var input = {
         name: $("#name").val(),
         photo: $("#photo").val(),
@@ -10,17 +10,18 @@ $("#submit").on("click", function(event) {
             $("#q3").val(),
             $("#q4").val(),
             $("#q5").val(),
-            $("#q1").val(),
-            $("#q1").val(),
-            $("#q1").val(),
-            $("#q1").val(),
-            $("#q1").val()
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
         ]
     }
 
-    $.POST("/api/friends", input, function(data){
-        console.log(data)
-    })
+    $.post("/api/friends", input, function(data){
+        console.log(data);
+        var lover = data[0].friend
+    });
 })
 
 

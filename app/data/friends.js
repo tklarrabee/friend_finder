@@ -1,5 +1,5 @@
 
-var friends = [{
+    var friends = [{
     name: "Ahmed",
     photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
     scores: [
@@ -22,12 +22,12 @@ var friends = [{
         1,
         2,
         3,
-        4,
+        3,
         2,
         3,
         4,
-        2,
-        2,
+        1,
+        3,
         5
     ]
 },
@@ -46,25 +46,8 @@ var friends = [{
         2,
         5
     ]
-}];
-
-module.exports = {
-    getFriends: function(){
-        
-    }
-}
+}]
 
 
-var exports = module.exports;
 
-exports.friends = friends;
-
-// exports.addFriend = function(req){
-//     var friend = {
-//         name: req.name,
-//         photo: req.photo,
-//         scores: req.scores
-//     };
-
-//     friends.push(friend);
-// }
+module.exports = friends;
