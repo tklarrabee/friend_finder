@@ -19,8 +19,11 @@ $("#submit").on("click", function(event) {
     }
 
     $.post("/api/friends", input, function(data){
-        console.log(data);
+        console.log(data[0].friend);
         var lover = data[0].friend
+        $("#loverName").text(lover.name);
+        $("#loverPic").attr("src", lover.photo);
+        $("#loverModal").modal();
     });
 })
 
